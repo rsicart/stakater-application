@@ -61,6 +61,7 @@ cronJob:
     #     - name: ndots
     #       value: '1'
     #   dnsPolicy: ClusterFirst
+    #   enableServiceLinks: false
     #   hostAliases:
     #   - ip: "127.0.0.1"
     #     hostnames:
@@ -111,6 +112,7 @@ job:
     #     - name: ndots
     #       value: '1'
     #   dnsPolicy: ClusterFirst
+    #   enableServiceLinks: false
     #   hostAliases:
     #   - ip: "127.0.0.1"
     #     hostnames:
@@ -304,6 +306,9 @@ deployment:
   # -- (string) DNS Policy.
   # @section -- Deployment Parameters
   dnsPolicy: ""
+  # -- (bool) Enable Kubernetes service links.
+  # @section -- Deployment Parameters
+  enableServiceLinks: true
   # -- (object) Startup probe.
   # @default -- See below
   # Must specify either one of the following field when enabled: httpGet, exec, tcpSocket, grpc
