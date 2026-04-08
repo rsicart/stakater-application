@@ -51,6 +51,8 @@ cronJob:
     #     requests:
     #         memory: 5Gi
     #         cpu: 1
+    #   podSecurityContext:
+    #     fsGroup: 2222
     #   initContainers:
     #     init-something:
     #       image: busybox

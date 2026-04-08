@@ -68,6 +68,9 @@ spec:
           serviceAccountName: {{ template "application.name" $ }}
           {{- end }}
           {{- end }}
+          {{- with $job.podSecurityContext }}
+          securityContext: {{ toYaml . | nindent 12 }}
+          {{- end }}
           {{- with $job.initContainers }}
           initContainers:
           {{- range $key, $value := . }}
